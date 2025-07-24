@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookReaderWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f792818d75d0f03554d497da45b4bc00877ef868")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookReaderWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookReaderWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
