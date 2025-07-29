@@ -1,49 +1,92 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BookReaderWebApp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"] - BookReader</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/BookReaderWebApp.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BookReaderWebApp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">
+                <i class="fas fa-book-open"></i>
+                BookReader
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="/Books" class="nav-link">Sách điện tử</a></li>
+                <li><a href="/Books/Audiobooks" class="nav-link">Sách nói</a></li>
+                <li><a href="/Books/Category" class="nav-link">Thể loại</a></li>
+                <li><a href="/Library" class="nav-link">Thư viện</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+                <a href="/Account/Login" class="btn btn-outline">Đăng nhập</a>
+                <a href="/Account/Register" class="btn btn-primary">Đăng ký</a>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+    <!-- Main Content -->
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            &copy; 2025 - BookReaderWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BookReader</h3>
+                    <p>Thư viện sách điện tử và sách nói hàng đầu Việt Nam. Khám phá thế giới tri thức qua từng trang sách.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Khám phá</h4>
+                    <ul>
+                        <li><a href="/Books">Sách điện tử</a></li>
+                        <li><a href="/Books/Audiobooks">Sách nói</a></li>
+                        <li><a href="/Books/Category">Thể loại</a></li>
+                        <li><a href="/Books/Search">Tìm kiếm</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="/Help">Hướng dẫn sử dụng</a></li>
+                        <li><a href="/Contact">Liên hệ</a></li>
+                        <li><a href="/FAQ">Câu hỏi thường gặp</a></li>
+                        <li><a href="/Support">Hỗ trợ kỹ thuật</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="/About">Giới thiệu</a></li>
+                        <li><a href="/Privacy">Chính sách bảo mật</a></li>
+                        <li><a href="/Terms">Điều khoản sử dụng</a></li>
+                        <li><a href="/Contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookReader. Tất cả quyền được bảo lưu.</p>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
