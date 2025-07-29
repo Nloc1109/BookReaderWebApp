@@ -5,88 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BookReader</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css?v=@DateTime.Now.Ticks" asp-append-version="true" />
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <a href="/" class="logo">
-                <i class="fas fa-book-open"></i>
-                BookReader
-            </a>
-            
-            <ul class="nav-menu">
-                <li><a href="/Books" class="nav-link">Sách điện tử</a></li>
-                <li><a href="/Books/Audiobooks" class="nav-link">Sách nói</a></li>
-                <li><a href="/Books/Category" class="nav-link">Thể loại</a></li>
-                <li><a href="/Library" class="nav-link">Thư viện</a></li>
-            </ul>
-
-            <div class="auth-buttons">
-                <a href="/Account/Login" class="btn btn-outline">Đăng nhập</a>
-                <a href="/Account/Register" class="btn btn-primary">Đăng ký</a>
-            </div>
+        <div class="logo">
+            <i class="fas fa-book-open"></i>
+            <span>BookReader</span>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="/Books">Sách điện tử</a>
+            <a href="/Audiobooks">Sách nói</a>
+            <a href="/Categories">Thể loại</a>
+            <a href="/Library">Thư viện</a>
         </nav>
+        
+        <div class="header-actions">
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-moon"></i>
+            <a href="/Account/Login" class="btn btn-secondary">Đăng nhập</a>
+            <a href="/Account/Register" class="btn btn-primary">Đăng ký</a>
+        </div>
     </header>
 
     <!-- Main Content -->
-    <main role="main">
+    <main>
         @RenderBody()
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>BookReader</h3>
-                    <p>Thư viện sách điện tử và sách nói hàng đầu Việt Nam. Khám phá thế giới tri thức qua từng trang sách.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Khám phá</h4>
-                    <ul>
-                        <li><a href="/Books">Sách điện tử</a></li>
-                        <li><a href="/Books/Audiobooks">Sách nói</a></li>
-                        <li><a href="/Books/Category">Thể loại</a></li>
-                        <li><a href="/Books/Search">Tìm kiếm</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Hỗ trợ</h4>
-                    <ul>
-                        <li><a href="/Help">Hướng dẫn sử dụng</a></li>
-                        <li><a href="/Contact">Liên hệ</a></li>
-                        <li><a href="/FAQ">Câu hỏi thường gặp</a></li>
-                        <li><a href="/Support">Hỗ trợ kỹ thuật</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Về chúng tôi</h4>
-                    <ul>
-                        <li><a href="/About">Giới thiệu</a></li>
-                        <li><a href="/Privacy">Chính sách bảo mật</a></li>
-                        <li><a href="/Terms">Điều khoản sử dụng</a></li>
-                        <li><a href="/Contact">Liên hệ</a></li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Về BookReader</h3>
+                <p>Thư viện sách điện tử và sách nói hàng đầu Việt Nam, cung cấp hàng nghìn đầu sách chất lượng cao.</p>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2025 BookReader. Tất cả quyền được bảo lưu.</p>
+            <div class="footer-section">
+                <h3>Liên kết</h3>
+                <a href="/About">Về chúng tôi</a>
+                <a href="/Contact">Liên hệ</a>
+                <a href="/Help">Trợ giúp</a>
+                <a href="/Terms">Điều khoản</a>
             </div>
+            
+            <div class="footer-section">
+                <h3>Thể loại</h3>
+                <a href="/Categories/Education">Giáo dục</a>
+                <a href="/Categories/Literature">Văn học</a>
+                <a href="/Categories/Science">Khoa học</a>
+                <a href="/Categories/Technology">Công nghệ</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Hỗ trợ</h3>
+                <a href="/FAQ">Câu hỏi thường gặp</a>
+                <a href="/Support">Hỗ trợ kỹ thuật</a>
+                <a href="/Feedback">Góp ý</a>
+                <a href="/Report">Báo lỗi</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 BookReader. Tất cả quyền được bảo lưu.</p>
         </div>
     </footer>
 
+    <script src="~/js/home.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

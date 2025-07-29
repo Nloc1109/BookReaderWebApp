@@ -3,38 +3,41 @@
 }
 
 <!-- Hero Section -->
-<section class="hero-section">
-    <div class="hero-background">
-        <div class="hero-overlay"></div>
-    </div>
-    
-    <div class="container">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                Thư viện <span class="text-gradient">sách điện tử</span><br>
-                <span class="text-gradient">sách nói</span> miễn phí
-            </h1>
-            
-            <p class="hero-subtitle">
-                BookReader là thư viện sách online cho phép người dùng đọc sách, nghe sách online. 
-                Chúng tôi có rất nhiều sách thuộc nhiều thể loại, bạn đọc có thể xem online hoặc download về máy để tiện theo dõi.
-            </p>
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            Thư viện <span class="highlight">sách điện tử</span><br>
+            <span class="highlight">sách nói</span> miễn phí
+        </h1>
+        
+        <p>
+            BookReader là thư viện sách online cho phép người dùng đọc sách, nghe sách online. 
+            Chúng tôi có rất nhiều sách thuộc nhiều thể loại, bạn đọc có thể xem online hoặc download về máy để tiện theo dõi.
+        </p>
 
-            <div class="search-section">
-                <div class="search-container">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" class="search-input" placeholder="Tìm kiếm sách, tác giả, thể loại...">
-                    <button class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
+        <div class="search-section">
+            <div class="search-container">
+                <div class="search-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Tìm kiếm sách, tác giả, thể loại...">
                 </div>
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                    <span>Tìm kiếm</span>
+                </button>
+            </div>
 
-                <div class="search-filters">
-                    <button class="filter-btn active" data-filter="all">Tất cả</button>
-                    <button class="filter-btn" data-filter="ebook">Sách điện tử</button>
-                    <button class="filter-btn" data-filter="audiobook">Sách nói</button>
-                    <button class="filter-btn" data-filter="free">Miễn phí</button>
-                </div>
+            <div class="filter-options">
+                <label class="filter-option">
+                    <input type="radio" name="filter" value="all" checked>
+                    <span class="radio-custom"></span>
+                    <span>Sách điện tử</span>
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="filter" value="audiobook">
+                    <span class="radio-custom"></span>
+                    <span>Sách nói</span>
+                </label>
             </div>
         </div>
     </div>
@@ -42,160 +45,89 @@
 
 <!-- Featured Books Section -->
 <section class="featured-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Sách nổi bật</h2>
-            <a href="/Books" class="view-all-btn">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+    <div class="section-title">Sách nổi bật</div>
+    
+    <div class="books-grid">
+        <div class="book-card">
+            <div class="book-cover">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="book-info">
+                <h3>Phiêu Lưu Cùng Toán Học</h3>
+                <p>Nhà xuất bản Giáo dục Việt Nam</p>
+                <div class="book-actions">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
         </div>
-        
-        <div class="books-grid">
-            <div class="book-card">
-                <div class="book-cover">
-                    <div class="book-cover-content">
-                        <i class="fas fa-book"></i>
-                        <span>Phiêu Lưu Cùng Toán Học</span>
-                    </div>
-                    <div class="book-badge">Mới</div>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">Phiêu bài tập cuối tuần môn Toán lớp 1</h3>
-                    <p class="book-author">Nhà xuất bản Giáo dục Việt Nam</p>
-                    <div class="book-meta">
-                        <div class="book-rating">
-                            <i class="fas fa-star"></i>
-                            <span>4.8</span>
-                        </div>
-                        <span class="book-genre">Giáo dục</span>
-                    </div>
-                    <div class="book-actions">
-                        <button class="btn-read">Đọc ngay</button>
-                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
-                    </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <i class="fas fa-pen"></i>
+            </div>
+            <div class="book-info">
+                <h3>Tập Viết Lớp 1</h3>
+                <p>Bộ Giáo dục và Đào tạo</p>
+                <div class="book-actions">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
                 </div>
             </div>
+        </div>
 
-            <div class="book-card">
-                <div class="book-cover" style="background: linear-gradient(45deg, #3b82f6, #1d4ed8, #6366f1, #4f46e5);">
-                    <div class="book-cover-content">
-                        <i class="fas fa-pen"></i>
-                        <span>Tập Viết Lớp 1</span>
-                    </div>
-                    <div class="book-badge free">Miễn phí</div>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">Tập Viết 1 Tập 2 - Kết Nối Tri Thức Với Cuộc Sống</h3>
-                    <p class="book-author">Bộ Giáo dục và Đào tạo</p>
-                    <div class="book-meta">
-                        <div class="book-rating">
-                            <i class="fas fa-star"></i>
-                            <span>4.7</span>
-                        </div>
-                        <span class="book-genre">Giáo dục</span>
-                    </div>
-                    <div class="book-actions">
-                        <button class="btn-read">Đọc ngay</button>
-                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
-                    </div>
+        <div class="book-card">
+            <div class="book-cover">
+                <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="book-info">
+                <h3>Sách Giáo Viên</h3>
+                <p>NXB Giáo dục Việt Nam</p>
+                <div class="book-actions">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
                 </div>
             </div>
+        </div>
 
-            <div class="book-card">
-                <div class="book-cover" style="background: linear-gradient(45deg, #06b6d4, #0891b2, #0e7490, #155e75);">
-                    <div class="book-cover-content">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <span>Sách Giáo Viên</span>
-                    </div>
-                    <div class="book-badge premium">Premium</div>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">Sách Giáo Viên Tiếng Việt 1 Tập 2</h3>
-                    <p class="book-author">NXB Giáo dục Việt Nam</p>
-                    <div class="book-meta">
-                        <div class="book-rating">
-                            <i class="fas fa-star"></i>
-                            <span>4.9</span>
-                        </div>
-                        <span class="book-genre">Ngôn ngữ</span>
-                    </div>
-                    <div class="book-actions">
-                        <button class="btn-read">Đọc ngay</button>
-                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
-                    </div>
+        <div class="book-card">
+            <div class="book-cover">
+                <i class="fas fa-calculator"></i>
+            </div>
+            <div class="book-info">
+                <h3>Toán Học Cơ Bản</h3>
+                <p>Bộ Giáo dục và Đào tạo</p>
+                <div class="book-actions">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
                 </div>
             </div>
+        </div>
 
-            <div class="book-card">
-                <div class="book-cover" style="background: linear-gradient(45deg, #f59e0b, #d97706, #b45309, #92400e);">
-                    <div class="book-cover-content">
-                        <i class="fas fa-calculator"></i>
-                        <span>Toán Học Cơ Bản</span>
-                    </div>
-                    <div class="book-badge">Hot</div>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">Toán 1 Tập 2 - Kết Nối Tri Thức Với Cuộc Sống</h3>
-                    <p class="book-author">Bộ Giáo dục và Đào tạo</p>
-                    <div class="book-meta">
-                        <div class="book-rating">
-                            <i class="fas fa-star"></i>
-                            <span>4.6</span>
-                        </div>
-                        <span class="book-genre">Toán học</span>
-                    </div>
-                    <div class="book-actions">
-                        <button class="btn-read">Đọc ngay</button>
-                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
-                    </div>
+        <div class="book-card">
+            <div class="book-cover">
+                <i class="fas fa-language"></i>
+            </div>
+            <div class="book-info">
+                <h3>Tiếng Việt Nâng Cao</h3>
+                <p>NXB Giáo dục Việt Nam</p>
+                <div class="book-actions">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
                 </div>
             </div>
+        </div>
 
-            <div class="book-card">
-                <div class="book-cover" style="background: linear-gradient(45deg, #10b981, #059669, #047857, #065f46);">
-                    <div class="book-cover-content">
-                        <i class="fas fa-language"></i>
-                        <span>Tiếng Việt Nâng Cao</span>
-                    </div>
-                    <div class="book-badge free">Miễn phí</div>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">Tiếng Việt 1 Tập 2 - Kết Nối Tri Thức Với Cuộc Sống</h3>
-                    <p class="book-author">NXB Giáo dục Việt Nam</p>
-                    <div class="book-meta">
-                        <div class="book-rating">
-                            <i class="fas fa-star"></i>
-                            <span>4.8</span>
-                        </div>
-                        <span class="book-genre">Ngôn ngữ</span>
-                    </div>
-                    <div class="book-actions">
-                        <button class="btn-read">Đọc ngay</button>
-                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
-                    </div>
-                </div>
+        <div class="book-card">
+            <div class="book-cover">
+                <i class="fas fa-book-open"></i>
             </div>
-
-            <div class="book-card">
-                <div class="book-cover" style="background: linear-gradient(45deg, #8b5cf6, #7c3aed, #6d28d9, #5b21b6);">
-                    <div class="book-cover-content">
-                        <i class="fas fa-book-open"></i>
-                        <span>Vở Bài Tập Toán</span>
-                    </div>
-                    <div class="book-badge">Trending</div>
-                </div>
-                <div class="book-info">
-                    <h3 class="book-title">Vở bài tập Toán 1 - Tập 2</h3>
-                    <p class="book-author">Nhà xuất bản Giáo dục</p>
-                    <div class="book-meta">
-                        <div class="book-rating">
-                            <i class="fas fa-star"></i>
-                            <span>4.5</span>
-                        </div>
-                        <span class="book-genre">Toán học</span>
-                    </div>
-                    <div class="book-actions">
-                        <button class="btn-read">Đọc ngay</button>
-                        <button class="btn-favorite"><i class="far fa-heart"></i></button>
-                    </div>
+            <div class="book-info">
+                <h3>Vở Bài Tập Toán</h3>
+                <p>Nhà xuất bản Giáo dục</p>
+                <div class="book-actions">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
                 </div>
             </div>
         </div>
@@ -204,146 +136,56 @@
 
 <!-- Categories Section -->
 <section class="categories-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Thể loại sách</h2>
-            <a href="/Books/Category" class="view-all-btn">Xem tất cả <i class="fas fa-arrow-right"></i></a>
+    <div class="section-title">Thể loại sách</div>
+    
+    <div class="categories-grid">
+        <div class="category-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Giáo dục</h3>
+            <p>1,234 sách</p>
         </div>
         
-        <div class="categories-grid">
-            <div class="category-card">
-                <div class="category-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3>Giáo dục</h3>
-                <p>1,234 sách</p>
-            </div>
-            
-            <div class="category-card">
-                <div class="category-icon">
-                    <i class="fas fa-language"></i>
-                </div>
-                <h3>Ngôn ngữ</h3>
-                <p>856 sách</p>
-            </div>
-            
-            <div class="category-card">
-                <div class="category-icon">
-                    <i class="fas fa-calculator"></i>
-                </div>
-                <h3>Toán học</h3>
-                <p>567 sách</p>
-            </div>
-            
-            <div class="category-card">
-                <div class="category-icon">
-                    <i class="fas fa-flask"></i>
-                </div>
-                <h3>Khoa học</h3>
-                <p>432 sách</p>
-            </div>
-            
-            <div class="category-card">
-                <div class="category-icon">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <h3>Nghệ thuật</h3>
-                <p>321 sách</p>
-            </div>
-            
-            <div class="category-card">
-                <div class="category-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h3>Văn học</h3>
-                <p>789 sách</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Features Section -->
-<section class="features-section">
-    <div class="container">
-        <div class="section-header text-center">
-            <h2 class="section-title">Tại sao chọn BookReader?</h2>
-            <p class="section-subtitle">Trải nghiệm đọc sách tốt nhất với những tính năng độc đáo</p>
+        <div class="category-card">
+            <i class="fas fa-language"></i>
+            <h3>Ngôn ngữ</h3>
+            <p>856 sách</p>
         </div>
         
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3>Đọc mọi lúc, mọi nơi</h3>
-                <p>Truy cập thư viện sách từ bất kỳ thiết bị nào, đồng bộ tiến độ đọc trên tất cả thiết bị.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-headphones"></i>
-                </div>
-                <h3>Sách nói chất lượng cao</h3>
-                <p>Thư viện sách nói phong phú với giọng đọc chuyên nghiệp, hỗ trợ đa tốc độ.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-bookmark"></i>
-                </div>
-                <h3>Bookmark & Ghi chú</h3>
-                <p>Đánh dấu trang, highlight text và thêm ghi chú cá nhân khi đọc sách.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Theo dõi tiến độ</h3>
-                <p>Thống kê chi tiết về thời gian đọc, số trang đã đọc và mục tiêu đọc sách.</p>
-            </div>
+        <div class="category-card">
+            <i class="fas fa-calculator"></i>
+            <h3>Toán học</h3>
+            <p>567 sách</p>
         </div>
-    </div>
-</section>
-
-<!-- Stats Section -->
-<section class="stats-section">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">50,000+</div>
-                <div class="stat-label">Sách điện tử</div>
-            </div>
-            
-            <div class="stat-item">
-                <div class="stat-number">10,000+</div>
-                <div class="stat-label">Sách nói</div>
-            </div>
-            
-            <div class="stat-item">
-                <div class="stat-number">100,000+</div>
-                <div class="stat-label">Người dùng</div>
-            </div>
-            
-            <div class="stat-item">
-                <div class="stat-number">1M+</div>
-                <div class="stat-label">Lượt đọc</div>
-            </div>
+        
+        <div class="category-card">
+            <i class="fas fa-flask"></i>
+            <h3>Khoa học</h3>
+            <p>432 sách</p>
+        </div>
+        
+        <div class="category-card">
+            <i class="fas fa-palette"></i>
+            <h3>Nghệ thuật</h3>
+            <p>321 sách</p>
+        </div>
+        
+        <div class="category-card">
+            <i class="fas fa-heart"></i>
+            <h3>Văn học</h3>
+            <p>789 sách</p>
         </div>
     </div>
 </section>
 
 <!-- Newsletter Section -->
 <section class="newsletter-section">
-    <div class="container">
-        <div class="newsletter-content">
-            <h2>Đăng ký nhận thông báo</h2>
-            <p>Nhận thông báo về sách mới, khuyến mãi và tin tức từ BookReader</p>
-            
-            <div class="newsletter-form">
-                <input type="email" placeholder="Nhập email của bạn" class="newsletter-input">
-                <button class="newsletter-btn">Đăng ký</button>
-            </div>
+    <div class="newsletter-content">
+        <h2>Đăng ký nhận thông báo</h2>
+        <p>Nhận thông báo về sách mới, khuyến mãi và tin tức từ BookReader</p>
+        
+        <div class="newsletter-form">
+            <input type="email" placeholder="Nhập email của bạn">
+            <button>Đăng ký</button>
         </div>
     </div>
 </section>
