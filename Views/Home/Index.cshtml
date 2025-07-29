@@ -1,8 +1,168 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookReader - Thư viện sách điện tử</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="~/css/home.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <!-- Floating Elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">
+                <i class="fas fa-book-open"></i>
+                BookReader
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Sách điện tử</a></li>
+                <li><a href="#" class="nav-link">Sách nói</a></li>
+                <li><a href="#" class="nav-link">Thể loại</a></li>
+                <li><a href="#" class="nav-link">Thư viện</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Đăng nhập</a>
+                <a href="#" class="btn btn-primary">Đăng ký</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero">
+        <h1 class="hero-title">
+            Thư viện <span style="color: var(--primary-green);">sách điện tử</span>,<br>
+            <span style="color: var(--primary-green);">sách nói</span> miễn phí
+        </h1>
+        
+        <p class="hero-subtitle">
+             là thư viện sách online cho phép người dùng đọc sách, nghe sách online. 
+            Chúng tôi có rất nhiều sách thuộc nhiều thể loại, bạn đọc có thể xem online hoặc download về máy để tiện theo dõi.
+        </p>
+
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-box" placeholder="Tìm kiếm sách, tác giả, thể loại...">
+        </div>
+
+        <div class="search-filters">
+            <button class="filter-btn active">Sách điện tử</button>
+            <button class="filter-btn">Sách nói</button>
+            <button class="filter-btn">Tất cả</button>
+        </div>
+
+        <button class="btn-search">
+            <i class="fas fa-search"></i> Tìm kiếm
+        </button>
+    </main>
+
+    <!-- Books Section -->
+    <section class="books-section">
+        <h2 class="section-title">Sách điện tử mới cập nhật</h2>
+        
+        <div class="books-grid">
+            <div class="book-card">
+                <div class="book-cover">
+                    Phiêu Lưu Cùng Toán Học
+                </div>
+                <h3 class="book-title">Phiêu bài tập cuối tuần môn Toán lớp 1</h3>
+                <p class="book-author">Nhà xuất bản Giáo dục Việt Nam</p>
+                <div class="book-meta">
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                    <span class="book-genre">Giáo dục</span>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover" style="background: linear-gradient(45deg, #3b82f6, #1d4ed8, #6366f1, #4f46e5);">
+                    Tập Viết Lớp 1
+                </div>
+                <h3 class="book-title">Tập Viết 1 Tập 2 - Kết Nối Tri Thức Với Cuộc Sống</h3>
+                <p class="book-author">Bộ Giáo dục và Đào tạo</p>
+                <div class="book-meta">
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                    </div>
+                    <span class="book-genre">Giáo dục</span>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover" style="background: linear-gradient(45deg, #06b6d4, #0891b2, #0e7490, #155e75);">
+                    Sách Giáo Viên Tiếng Việt
+                </div>
+                <h3 class="book-title">Sách Giáo Viên Tiếng Việt 1 Tập 2</h3>
+                <p class="book-author">NXB Giáo dục Việt Nam</p>
+                <div class="book-meta">
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <span class="book-genre">Ngôn ngữ</span>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover" style="background: linear-gradient(45deg, #f59e0b, #d97706, #b45309, #92400e);">
+                    Toán Học Cơ Bản
+                </div>
+                <h3 class="book-title">Toán 1 Tập 2 - Kết Nối Tri Thức Với Cuộc Sống</h3>
+                <p class="book-author">Bộ Giáo dục và Đào tạo</p>
+                <div class="book-meta">
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                    </div>
+                    <span class="book-genre">Toán học</span>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover" style="background: linear-gradient(45deg, #10b981, #059669, #047857, #065f46);">
+                    Tiếng Việt Nâng Cao
+                </div>
+                <h3 class="book-title">Tiếng Việt 1 Tập 2 - Kết Nối Tri Thức Với Cuộc Sống</h3>
+                <p class="book-author">NXB Giáo dục Việt Nam</p>
+                <div class="book-meta">
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                    <span class="book-genre">Ngôn ngữ</span>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover" style="background: linear-gradient(45deg, #8b5cf6, #7c3aed, #6d28d9, #5b21b6);">
+                    Vở Bài Tập Toán
+                </div>
+                <h3 class="book-title">Vở bài tập Toán 1 - Tập 2</h3>
+                <p class="book-author">Nhà xuất bản Giáo dục</p>
+                <div class="book-meta">
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                    </div>
+                    <span class="book-genre">Toán học</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/js/home.js"></script>
+</body>
+</html>
