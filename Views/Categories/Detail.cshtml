@@ -1,0 +1,515 @@
+@{
+    ViewData["Title"] = ViewData["CategoryName"];
+    var categoryName = ViewData["CategoryName"]?.ToString() ?? "Thể loại";
+}
+
+<!-- Hero Section -->
+<section class="category-hero-section">
+    <div class="category-hero-content">
+        <div class="category-hero-left">
+            <div class="breadcrumb">
+                <a href="/Categories">Thể loại</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>@categoryName</span>
+            </div>
+            
+            <h1>@categoryName</h1>
+            <p>Khám phá bộ sưu tập sách @categoryName.ToLower() đa dạng và phong phú. Từ những tác phẩm kinh điển đến những cuốn sách mới nhất, tất cả đều được chọn lọc kỹ lưỡng để mang đến trải nghiệm đọc tuyệt vời.</p>
+            
+            <div class="category-stats">
+                <div class="stat-item">
+                    <i class="fas fa-book"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">2,567</div>
+                        <div class="stat-label">Sách</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">45,000+</div>
+                        <div class="stat-label">Độc giả</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label">Đánh giá</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category-hero-right">
+            <div class="category-icon-large">
+                @{
+                    var iconClass = categoryName switch
+                    {
+                        "Văn học" => "fas fa-book-open",
+                        "Khoa học" => "fas fa-flask",
+                        "Kinh tế" => "fas fa-chart-line",
+                        "Tình cảm" => "fas fa-heart",
+                        "Giáo dục" => "fas fa-graduation-cap",
+                        "Self-help" => "fas fa-lightbulb",
+                        "Lịch sử" => "fas fa-history",
+                        "Du lịch" => "fas fa-mountain",
+                        "Công nghệ" => "fas fa-laptop-code",
+                        "Viễn tưởng" => "fas fa-magic",
+                        "Nghệ thuật" => "fas fa-palette",
+                        "Sức khỏe" => "fas fa-leaf",
+                        _ => "fas fa-book"
+                    };
+                }
+                <i class="@iconClass"></i>
+            </div>
+            
+            <div class="category-tags">
+                <span class="tag">Bestseller</span>
+                <span class="tag">Mới nhất</span>
+                <span class="tag">Được yêu thích</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filters Section -->
+<section class="filters-section">
+    <div class="filters-content">
+        <div class="search-filter">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" class="search-input" placeholder="Tìm kiếm sách trong @categoryName.ToLower()...">
+            </div>
+        </div>
+        
+        <div class="filter-options">
+            <select class="filter-select" id="sort-filter">
+                <option value="">Sắp xếp theo</option>
+                <option value="popular">Phổ biến nhất</option>
+                <option value="newest">Mới nhất</option>
+                <option value="rating">Đánh giá cao</option>
+                <option value="title">Tên sách A-Z</option>
+            </select>
+            
+            <select class="filter-select" id="format-filter">
+                <option value="">Tất cả định dạng</option>
+                <option value="ebook">Sách điện tử</option>
+                <option value="audiobook">Sách nói</option>
+            </select>
+            
+            <select class="filter-select" id="language-filter">
+                <option value="">Tất cả ngôn ngữ</option>
+                <option value="vietnamese">Tiếng Việt</option>
+                <option value="english">Tiếng Anh</option>
+                <option value="chinese">Tiếng Trung</option>
+            </select>
+        </div>
+        
+        <div class="view-options">
+            <button class="view-btn active" data-view="grid">
+                <i class="fas fa-th"></i>
+            </button>
+            <button class="view-btn" data-view="list">
+                <i class="fas fa-list"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Books Section -->
+<section class="books-section">
+    <div class="books-header">
+        <h2>Sách @categoryName.ToLower()</h2>
+        <div class="books-count">Hiển thị <span id="books-count">12</span> trong số <span id="total-books">2,567</span> sách</div>
+    </div>
+    
+    <div class="books-grid" id="books-container">
+        <!-- Sample Books -->
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+                <div class="book-badge new">Mới</div>
+            </div>
+            <div class="book-info">
+                <h3>Đắc Nhân Tâm</h3>
+                <p class="book-author">Dale Carnegie</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-text">4.5 (1,234)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">E-book</span>
+                    <span class="book-pages">320 trang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+                <div class="book-badge popular">Phổ biến</div>
+            </div>
+            <div class="book-info">
+                <h3>Nhà Giả Kim</h3>
+                <p class="book-author">Paulo Coelho</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.8 (2,567)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">E-book</span>
+                    <span class="book-pages">208 trang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>7 Thói Quen Hiệu Quả</h3>
+                <p class="book-author">Stephen R. Covey</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.2 (890)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">Audiobook</span>
+                    <span class="book-duration">12h 30m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+                <div class="book-badge featured">Nổi bật</div>
+            </div>
+            <div class="book-info">
+                <h3>Atomic Habits</h3>
+                <p class="book-author">James Clear</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.9 (3,456)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">E-book</span>
+                    <span class="book-pages">320 trang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>Nghĩ Giàu và Làm Giàu</h3>
+                <p class="book-author">Napoleon Hill</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-text">4.6 (1,789)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">E-book</span>
+                    <span class="book-pages">256 trang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>Đọc Vị Bất Kỳ Ai</h3>
+                <p class="book-author">David J. Lieberman</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.3 (567)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">Audiobook</span>
+                    <span class="book-duration">8h 45m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>Người Giàu Nhất Thành Babylon</h3>
+                <p class="book-author">George S. Clason</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.7 (2,123)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">E-book</span>
+                    <span class="book-pages">192 trang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>Bí Mật Của Sự May Mắn</h3>
+                <p class="book-author">Alex Rovira</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-text">4.4 (789)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">E-book</span>
+                    <span class="book-pages">144 trang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>Đắc Nhân Tâm</h3>
+                <p class="book-author">Dale Carnegie</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.8 (3,456)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">Audiobook</span>
+                    <span class="book-duration">10h 20m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>Nghệ Thuật Sống</h3>
+                <p class="book-author">Thích Nhất Hạnh</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.9 (1,234)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">E-book</span>
+                    <span class="book-pages">288 trang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>Hạnh Phúc Tại Tâm</h3>
+                <p class="book-author">Matthieu Ricard</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-text">4.6 (987)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">E-book</span>
+                    <span class="book-pages">320 trang</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>Đường Đến Thành Công</h3>
+                <p class="book-author">Napoleon Hill</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.3 (654)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">Audiobook</span>
+                    <span class="book-duration">14h 15m</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/200x280/4ade80/ffffff?text=Book" alt="Sách">
+                <div class="book-overlay">
+                    <button class="btn-read">Đọc ngay</button>
+                    <button class="btn-preview">Xem trước</button>
+                </div>
+            </div>
+            <div class="book-info">
+                <h3>Bí Quyết Thành Công</h3>
+                <p class="book-author">Jack Canfield</p>
+                <div class="book-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.7 (1,567)</span>
+                </div>
+                <div class="book-meta">
+                    <span class="book-format">E-book</span>
+                    <span class="book-pages">256 trang</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pagination -->
+    <div class="pagination">
+        <button class="pagination-btn" disabled>
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <span class="pagination-dots">...</span>
+        <button class="pagination-btn">15</button>
+        <button class="pagination-btn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/category-detail.js"></script>
+} 

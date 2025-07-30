@@ -1,0 +1,486 @@
+@{
+    ViewData["Title"] = "Thư viện";
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-left">
+            <h1>Thư viện sách</h1>
+            <p>Khám phá kho tàng sách điện tử và sách nói phong phú với hàng nghìn đầu sách thuộc nhiều thể loại khác nhau. Tìm kiếm, đọc và thưởng thức những cuốn sách hay nhất.</p>
+            
+            <div class="hero-search">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="hero-search-input" placeholder="Tìm kiếm sách, tác giả, thể loại...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-book"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">50,000+</div>
+                        <div class="stat-label">E-books</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-headphones"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Audiobooks</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">100,000+</div>
+                        <div class="stat-label">Readers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="floating-books">
+                <div class="floating-book book-1">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="floating-book book-2">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <div class="floating-book book-3">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="floating-book book-4">
+                    <i class="fas fa-pen"></i>
+                </div>
+                <div class="floating-book book-5">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+            </div>
+
+            <div class="featured-categories">
+                <h3>Thể loại nổi bật</h3>
+                <div class="category-preview">
+                    <div class="preview-item">
+                        <i class="fas fa-book-open"></i>
+                        <span>Văn học</span>
+                    </div>
+                    <div class="preview-item">
+                        <i class="fas fa-flask"></i>
+                        <span>Khoa học</span>
+                    </div>
+                    <div class="preview-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Kinh tế</span>
+                    </div>
+                    <div class="preview-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Tình cảm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="section-header">
+        <h2>Thể loại sách</h2>
+        <a href="/Categories" class="view-all-btn">Xem tất cả</a>
+    </div>
+    
+    <div class="categories-scroll">
+        <div class="category-card">
+            <i class="fas fa-book-open"></i>
+            <h3>Văn học</h3>
+            <p>Tiểu thuyết, truyện ngắn</p>
+        </div>
+        <div class="category-card">
+            <i class="fas fa-flask"></i>
+            <h3>Khoa học</h3>
+            <p>Nghiên cứu, khám phá</p>
+        </div>
+        <div class="category-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Kinh tế</h3>
+            <p>Quản lý, đầu tư</p>
+        </div>
+        <div class="category-card">
+            <i class="fas fa-heart"></i>
+            <h3>Tình cảm</h3>
+            <p>Lãng mạn, gia đình</p>
+        </div>
+        <div class="category-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Giáo dục</h3>
+            <p>Học tập, phát triển</p>
+        </div>
+        <div class="category-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Self-help</h3>
+            <p>Phát triển bản thân</p>
+        </div>
+        <div class="category-card">
+            <i class="fas fa-history"></i>
+            <h3>Lịch sử</h3>
+            <p>Quá khứ, văn hóa</p>
+        </div>
+        <div class="category-card">
+            <i class="fas fa-mountain"></i>
+            <h3>Du lịch</h3>
+            <p>Khám phá, trải nghiệm</p>
+        </div>
+    </div>
+</section>
+
+<!-- Trending Books Section -->
+<section class="trending-section">
+    <div class="section-header">
+        <h2>Sách thịnh hành</h2>
+        <a href="/Books/Trending" class="view-all-btn">Xem tất cả</a>
+    </div>
+    
+    <div class="books-scroll">
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Đắc Nhân Tâm">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Đắc Nhân Tâm</h3>
+                <p>Dale Carnegie</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.8</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Nhà Giả Kim">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Nhà Giả Kim</h3>
+                <p>Paulo Coelho</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.7</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Tuổi Trẻ Đáng Giá Bao Nhiêu">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Tuổi Trẻ Đáng Giá Bao Nhiêu</h3>
+                <p>Rosie Nguyễn</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.6</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Cách Nghĩ Để Thành Công">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Cách Nghĩ Để Thành Công</h3>
+                <p>Napoleon Hill</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Đọc Vị Bất Kỳ Ai">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Đọc Vị Bất Kỳ Ai</h3>
+                <p>David J. Lieberman</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.4</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Nghĩ Giàu Làm Giàu">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Nghĩ Giàu Làm Giàu</h3>
+                <p>Napoleon Hill</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- New Releases Section -->
+<section class="new-releases-section">
+    <div class="section-header">
+        <h2>Sách mới xuất bản</h2>
+        <a href="/Books/New" class="view-all-btn">Xem tất cả</a>
+    </div>
+    
+    <div class="books-scroll">
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Mới 1">
+                <div class="new-badge">Mới</div>
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Nghệ Thuật Sống Tối Giản</h3>
+                <p>Marie Kondo</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.9</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Mới 2">
+                <div class="new-badge">Mới</div>
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Atomic Habits</h3>
+                <p>James Clear</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.8</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Mới 3">
+                <div class="new-badge">Mới</div>
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Deep Work</h3>
+                <p>Cal Newport</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.7</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Mới 4">
+                <div class="new-badge">Mới</div>
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Mindset</h3>
+                <p>Carol S. Dweck</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.6</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Mới 5">
+                <div class="new-badge">Mới</div>
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Essentialism</h3>
+                <p>Greg McKeown</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Mới 6">
+                <div class="new-badge">Mới</div>
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Grit</h3>
+                <p>Angela Duckworth</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recommended Section -->
+<section class="recommended-section">
+    <div class="section-header">
+        <h2>Đề xuất cho bạn</h2>
+        <a href="/Books/Recommended" class="view-all-btn">Xem tất cả</a>
+    </div>
+    
+    <div class="books-scroll">
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Đề Xuất 1">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>7 Thói Quen Hiệu Quả</h3>
+                <p>Stephen R. Covey</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.8</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Đề Xuất 2">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Rich Dad Poor Dad</h3>
+                <p>Robert T. Kiyosaki</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.7</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Đề Xuất 3">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Đời Thay Đổi Khi Chúng Ta Thay Đổi</h3>
+                <p>Andrew Matthews</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.6</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Đề Xuất 4">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Người Giàu Nhất Thành Babylon</h3>
+                <p>George S. Clason</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Đề Xuất 5">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Đắc Nhân Tâm</h3>
+                <p>Dale Carnegie</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.8</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-cover">
+                <img src="https://via.placeholder.com/180x240/4ade80/ffffff?text=Book" alt="Sách Đề Xuất 6">
+            </div>
+            <div class="book-overlay">
+                <button class="btn-read">Đọc ngay</button>
+            </div>
+            <div class="book-info">
+                <h3>Nhà Giả Kim</h3>
+                <p>Paulo Coelho</p>
+                <div class="book-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/library.js"></script>
+}

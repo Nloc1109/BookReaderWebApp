@@ -1,0 +1,1630 @@
+/* CATEGORIES PAGE STYLES */
+
+/* CSS Variables */
+:root {
+    --primary-blue: #1e40af;
+    --primary-green: #4ade80;
+    --primary-orange: #fb923c;
+    --primary-pink: #ec4899;
+}
+
+/* Scope all styles to categories page only */
+body:has(.hero-section) .home-btn,
+body:has(.hero-section) .hero-section,
+body:has(.hero-section) .hero-content,
+body:has(.hero-section) .hero-left,
+body:has(.hero-section) .hero-right,
+body:has(.hero-section) .hero-content h1,
+body:has(.hero-section) .hero-content p,
+body:has(.hero-section) .hero-search,
+body:has(.hero-section) .search-container,
+body:has(.hero-section) .search-container i,
+body:has(.hero-section) .hero-search-input,
+body:has(.hero-section) .hero-search-input::placeholder,
+body:has(.hero-section) .search-btn,
+body:has(.hero-section) .search-btn:hover,
+body:has(.hero-section) .hero-stats,
+body:has(.hero-section) .stat-item,
+body:has(.hero-section) .stat-item:hover,
+body:has(.hero-section) .stat-item i,
+body:has(.hero-section) .stat-info,
+body:has(.hero-section) .stat-number,
+body:has(.hero-section) .stat-label,
+body:has(.hero-section) .floating-books,
+body:has(.hero-section) .floating-book,
+body:has(.hero-section) .floating-book.book-1,
+body:has(.hero-section) .floating-book.book-2,
+body:has(.hero-section) .floating-book.book-3,
+body:has(.hero-section) .floating-book.book-4,
+body:has(.hero-section) .floating-book.book-5,
+body:has(.hero-section) .featured-categories,
+body:has(.hero-section) .featured-categories h3,
+body:has(.hero-section) .category-preview,
+body:has(.hero-section) .preview-item,
+body:has(.hero-section) .preview-item:hover,
+body:has(.hero-section) .preview-item i,
+body:has(.hero-section) .preview-item span,
+body:has(.hero-section) .section-header,
+body:has(.hero-section) .section-header h2,
+body:has(.hero-section) .view-all-btn,
+body:has(.hero-section) .view-all-btn:hover,
+body:has(.hero-section) .popular-categories-section,
+body:has(.hero-section) .all-categories-section,
+body:has(.hero-section) .categories-grid,
+body:has(.hero-section) .categories-list,
+body:has(.hero-section) .category-card-large,
+body:has(.hero-section) .category-item,
+body:has(.hero-section) .view-options,
+body:has(.hero-section) .view-btn,
+body:has(.hero-section) .filter-options,
+body:has(.hero-section) .filter-select {
+    /* Apply styles here */
+}
+
+/* Home Button in Header - Only for Categories pages */
+body:has(.hero-section) .home-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+}
+
+body:has(.hero-section) .home-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Hero Section */
+body:has(.hero-section) .hero-section {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+    padding: 4rem 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+body:has(.hero-section) .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+body:has(.hero-section) .hero-left {
+    flex: 1;
+    text-align: left;
+}
+
+body:has(.hero-section) .hero-right {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+}
+
+body:has(.hero-section) .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body:has(.hero-section) .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 500px;
+}
+
+/* Hero Search */
+body:has(.hero-section) .hero-search {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+body:has(.hero-section) .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    padding: 0.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body:has(.hero-section) .search-container i {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
+
+body:has(.hero-section) .hero-search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+body:has(.hero-section) .hero-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body:has(.hero-section) .search-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 0.5rem;
+}
+
+body:has(.hero-section) .search-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Hero Stats */
+body:has(.hero-section) .hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+body:has(.hero-section) .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+body:has(.hero-section) .stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+body:has(.hero-section) .stat-item i {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+}
+
+body:has(.hero-section) .stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+body:has(.hero-section) .stat-number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+body:has(.hero-section) .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Floating Books Animation */
+body:has(.hero-section) .floating-books {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body:has(.hero-section) .floating-book {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+body:has(.hero-section) .floating-book.book-1 {
+    top: 20%;
+    right: 20%;
+    animation-delay: 0s;
+}
+
+body:has(.hero-section) .floating-book.book-2 {
+    top: 40%;
+    right: 60%;
+    animation-delay: 1s;
+}
+
+body:has(.hero-section) .floating-book.book-3 {
+    top: 60%;
+    right: 30%;
+    animation-delay: 2s;
+}
+
+body:has(.hero-section) .floating-book.book-4 {
+    top: 30%;
+    right: 80%;
+    animation-delay: 3s;
+}
+
+body:has(.hero-section) .floating-book.book-5 {
+    top: 70%;
+    right: 70%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* Featured Categories */
+body:has(.hero-section) .featured-categories {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 300px;
+}
+
+body:has(.hero-section) .featured-categories h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+body:has(.hero-section) .category-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+body:has(.hero-section) .preview-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+body:has(.hero-section) .preview-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+body:has(.hero-section) .preview-item i {
+    font-size: 1rem;
+    color: var(--primary-green);
+}
+
+body:has(.hero-section) .preview-item span {
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 500;
+}
+
+/* Section Headers */
+body:has(.hero-section) .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+body:has(.hero-section) .section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* View Options */
+body:has(.hero-section) .view-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+body:has(.hero-section) .view-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body:has(.hero-section) .view-btn.active,
+body:has(.hero-section) .view-btn:hover {
+    background: var(--primary-green);
+    color: white;
+    border-color: var(--primary-green);
+}
+
+/* Filter Options */
+body:has(.hero-section) .filter-options {
+    display: flex;
+    gap: 1rem;
+}
+
+body:has(.hero-section) .filter-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+body:has(.hero-section) .filter-select option {
+    background: #1a1a1a;
+    color: white;
+}
+
+/* Popular Categories Section */
+body:has(.hero-section) .popular-categories-section {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+body:has(.hero-section) .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Category Card Large */
+body:has(.hero-section) .category-card-large {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+body:has(.hero-section) .category-card-large:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--primary-green);
+}
+
+body:has(.hero-section) .category-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+body:has(.hero-section) .category-icon i {
+    font-size: 2rem;
+    color: var(--primary-green);
+}
+
+body:has(.hero-section) .category-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+body:has(.hero-section) .category-info p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+body:has(.hero-section) .category-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+body:has(.hero-section) .book-count,
+body:has(.hero-section) .reader-count {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+}
+
+body:has(.hero-section) .featured-book {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body:has(.hero-section) .featured-book img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+body:has(.hero-section) .featured-book .book-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+body:has(.hero-section) .featured-book .book-info p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+body:has(.hero-section) .category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body:has(.hero-section) .category-card-large:hover .category-overlay {
+    opacity: 1;
+}
+
+body:has(.hero-section) .btn-explore {
+    background: var(--primary-green);
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+body:has(.hero-section) .btn-explore:hover {
+    background: #22c55e;
+    transform: scale(1.1);
+}
+
+/* All Categories Section */
+body:has(.hero-section) .all-categories-section {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+body:has(.hero-section) .categories-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Category Item */
+body:has(.hero-section) .category-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+body:has(.hero-section) .category-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+    border-color: var(--primary-green);
+}
+
+body:has(.hero-section) .category-icon-small {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+body:has(.hero-section) .category-icon-small i {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+}
+
+body:has(.hero-section) .category-details {
+    flex: 1;
+}
+
+body:has(.hero-section) .category-details h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+body:has(.hero-section) .category-details p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.75rem;
+}
+
+body:has(.hero-section) .category-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body:has(.hero-section) .dot {
+    color: var(--primary-green);
+}
+
+body:has(.hero-section) .category-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+body:has(.hero-section) .btn-view {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+body:has(.hero-section) .btn-view:hover {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+    transform: scale(1.05);
+}
+
+/* Light Mode Styles */
+body.light-mode:has(.hero-section) .hero-section {
+    background: linear-gradient(135deg, #fb923c 0%, #ec4899 100%);
+}
+
+body.light-mode:has(.hero-section) .stat-item {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.hero-section) .stat-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+body.light-mode:has(.hero-section) .stat-item i {
+    color: #ea580c;
+}
+
+body.light-mode:has(.hero-section) .floating-book {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.hero-section) .featured-categories {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.hero-section) .preview-item {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.light-mode:has(.hero-section) .preview-item:hover {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.5), rgba(236, 72, 153, 0.5));
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px rgba(251, 146, 60, 0.4);
+}
+
+body.light-mode:has(.hero-section) .preview-item i {
+    color: #ea580c;
+}
+
+body.light-mode:has(.hero-section) .section-header h2 {
+    color: #1f2937;
+}
+
+body.light-mode:has(.hero-section) .view-btn {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #374151;
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.hero-section) .view-btn.active,
+body.light-mode:has(.hero-section) .view-btn:hover {
+    background: #fb923c;
+    color: white;
+    border-color: #fb923c;
+}
+
+body.light-mode:has(.hero-section) .filter-select {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #374151;
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.hero-section) .filter-select option {
+    background: #fff5f5;
+    color: #374151;
+}
+
+body.light-mode:has(.hero-section) .category-card-large {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode:has(.hero-section) .category-card-large:hover {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.4), rgba(236, 72, 153, 0.4));
+    border-color: #fb923c;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(251, 146, 60, 0.4), 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+body.light-mode:has(.hero-section) .category-icon {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.hero-section) .category-icon i {
+    color: #fb923c;
+}
+
+body.light-mode:has(.hero-section) .category-info h3 {
+    color: #1f2937;
+}
+
+body.light-mode:has(.hero-section) .category-info p {
+    color: #4b5563;
+}
+
+body.light-mode:has(.hero-section) .book-count,
+body.light-mode:has(.hero-section) .reader-count {
+    color: #374151;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.hero-section) .featured-book {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode:has(.hero-section) .featured-book .book-info h4 {
+    color: #1f2937;
+}
+
+body.light-mode:has(.hero-section) .featured-book .book-info p {
+    color: #4b5563;
+}
+
+body.light-mode:has(.hero-section) .btn-explore {
+    background: #fb923c;
+}
+
+body.light-mode:has(.hero-section) .btn-explore:hover {
+    background: #ea580c;
+}
+
+body.light-mode:has(.hero-section) .category-item {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode:has(.hero-section) .category-item:hover {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.35), rgba(236, 72, 153, 0.35));
+    border-color: #fb923c;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(251, 146, 60, 0.35), 0 0 15px rgba(236, 72, 153, 0.25);
+}
+
+body.light-mode:has(.hero-section) .category-icon-small {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.hero-section) .category-icon-small i {
+    color: #fb923c;
+}
+
+body.light-mode:has(.hero-section) .category-details h3 {
+    color: #1f2937;
+}
+
+body.light-mode:has(.hero-section) .category-details p {
+    color: #4b5563;
+}
+
+body.light-mode:has(.hero-section) .category-meta {
+    color: #6b7280;
+}
+
+body.light-mode:has(.hero-section) .dot {
+    color: #fb923c;
+}
+
+body.light-mode:has(.hero-section) .btn-view {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #374151;
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.hero-section) .btn-view:hover {
+    background: #fb923c;
+    border-color: #fb923c;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body:has(.hero-section) .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    body:has(.hero-section) .hero-left {
+        text-align: center;
+    }
+    body:has(.hero-section) .hero-right {
+        min-height: 300px;
+    }
+    body:has(.hero-section) .hero-content h1 {
+        font-size: 2rem;
+    }
+    body:has(.hero-section) .hero-content p {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body:has(.hero-section) .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    body:has(.hero-section) .stat-item {
+        min-width: 140px;
+    }
+    body:has(.hero-section) .search-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    body:has(.hero-section) .hero-search-input {
+        width: 100%;
+        text-align: center;
+    }
+    body:has(.hero-section) .search-btn {
+        width: 100%;
+        margin-right: 0;
+    }
+    body:has(.hero-section) .featured-categories {
+        position: relative;
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    body:has(.hero-section) .floating-books {
+        display: none;
+    }
+    body:has(.hero-section) .section-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    body:has(.hero-section) .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    body:has(.hero-section) .category-card-large {
+        padding: 1.5rem;
+    }
+    body:has(.hero-section) .categories-list {
+        padding: 0 1rem;
+    }
+    body:has(.hero-section) .category-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    body:has(.hero-section) .category-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body:has(.hero-section) .hero-section {
+        padding: 2rem 0;
+    }
+    body:has(.hero-section) .popular-categories-section,
+    body:has(.hero-section) .all-categories-section {
+        padding: 2rem 0;
+    }
+    body:has(.hero-section) .category-card-large {
+        padding: 1rem;
+    }
+    body:has(.hero-section) .category-icon {
+        width: 60px;
+        height: 60px;
+    }
+    body:has(.hero-section) .category-icon i {
+        font-size: 1.5rem;
+    }
+    body:has(.hero-section) .category-info h3 {
+        font-size: 1.2rem;
+    }
+    body:has(.hero-section) .category-info p {
+        font-size: 0.9rem;
+    }
+    body:has(.hero-section) .category-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    body:has(.hero-section) .featured-book {
+        flex-direction: column;
+        text-align: center;
+    }
+    body:has(.hero-section) .category-item {
+        padding: 1rem;
+    }
+    body:has(.hero-section) .category-icon-small {
+        width: 50px;
+        height: 50px;
+    }
+    body:has(.hero-section) .category-icon-small i {
+        font-size: 1.2rem;
+    }
+    body:has(.hero-section) .category-details h3 {
+        font-size: 1.1rem;
+    }
+    body:has(.hero-section) .category-details p {
+        font-size: 0.9rem;
+    }
+}
+
+/* CATEGORY DETAIL PAGE STYLES */
+
+/* Category Hero Section */
+body:has(.category-hero-section) .category-hero-section {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+    padding: 4rem 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+body:has(.category-hero-section) .category-hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+body:has(.category-hero-section) .category-hero-left {
+    flex: 1;
+}
+
+body:has(.category-hero-section) .category-hero-right {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+/* Breadcrumb */
+body:has(.category-hero-section) .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+body:has(.category-hero-section) .breadcrumb a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+body:has(.category-hero-section) .breadcrumb a:hover {
+    opacity: 0.7;
+}
+
+body:has(.category-hero-section) .breadcrumb i {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+body:has(.category-hero-section) .breadcrumb span {
+    color: var(--primary-green);
+    font-weight: 500;
+}
+
+/* Category Hero Title */
+body:has(.category-hero-section) .category-hero-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body:has(.category-hero-section) .category-hero-left p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Category Stats */
+body:has(.category-hero-section) .category-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+body:has(.category-hero-section) .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+body:has(.category-hero-section) .stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+body:has(.category-hero-section) .stat-item i {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+}
+
+body:has(.category-hero-section) .stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+body:has(.category-hero-section) .stat-number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+body:has(.category-hero-section) .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Category Icon Large */
+body:has(.category-hero-section) .category-icon-large {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+body:has(.category-hero-section) .category-icon-large i {
+    font-size: 3rem;
+    color: var(--primary-green);
+}
+
+/* Category Tags */
+body:has(.category-hero-section) .category-tags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+body:has(.category-hero-section) .tag {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Filters Section */
+body:has(.category-hero-section) .filters-section {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body:has(.category-hero-section) .filters-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+body:has(.category-hero-section) .search-filter {
+    flex: 1;
+    max-width: 400px;
+}
+
+body:has(.category-hero-section) .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 0.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body:has(.category-hero-section) .search-container i {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+body:has(.category-hero-section) .search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+body:has(.category-hero-section) .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Filter Options */
+body:has(.category-hero-section) .filter-options {
+    display: flex;
+    gap: 1rem;
+}
+
+body:has(.category-hero-section) .filter-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+body:has(.category-hero-section) .filter-select option {
+    background: #1a1a1a;
+    color: white;
+}
+
+/* View Options */
+body:has(.category-hero-section) .view-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+body:has(.category-hero-section) .view-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body:has(.category-hero-section) .view-btn.active,
+body:has(.category-hero-section) .view-btn:hover {
+    background: var(--primary-green);
+    color: white;
+    border-color: var(--primary-green);
+}
+
+/* Books Section */
+body:has(.category-hero-section) .books-section {
+    padding: 3rem 0;
+}
+
+body:has(.category-hero-section) .books-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+body:has(.category-hero-section) .books-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+body:has(.category-hero-section) .books-count {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Books Grid */
+body:has(.category-hero-section) .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Book Card */
+body:has(.category-hero-section) .book-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+body:has(.category-hero-section) .book-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--primary-green);
+}
+
+/* Book Cover */
+body:has(.category-hero-section) .book-cover {
+    position: relative;
+    overflow: hidden;
+}
+
+body:has(.category-hero-section) .book-cover img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+body:has(.category-hero-section) .book-card:hover .book-cover img {
+    transform: scale(1.05);
+}
+
+/* Book Overlay */
+body:has(.category-hero-section) .book-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body:has(.category-hero-section) .book-card:hover .book-overlay {
+    opacity: 1;
+}
+
+body:has(.category-hero-section) .btn-read,
+body:has(.category-hero-section) .btn-preview {
+    background: var(--primary-green);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+body:has(.category-hero-section) .btn-preview {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body:has(.category-hero-section) .btn-read:hover,
+body:has(.category-hero-section) .btn-preview:hover {
+    transform: scale(1.05);
+}
+
+/* Book Badge */
+body:has(.category-hero-section) .book-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+body:has(.category-hero-section) .book-badge.new {
+    background: #10b981;
+}
+
+body:has(.category-hero-section) .book-badge.popular {
+    background: #f59e0b;
+}
+
+body:has(.category-hero-section) .book-badge.featured {
+    background: #ef4444;
+}
+
+/* Book Info */
+body:has(.category-hero-section) .book-info {
+    padding: 1.5rem;
+}
+
+body:has(.category-hero-section) .book-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+body:has(.category-hero-section) .book-author {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+/* Book Rating */
+body:has(.category-hero-section) .book-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+body:has(.category-hero-section) .stars {
+    display: flex;
+    gap: 0.25rem;
+}
+
+body:has(.category-hero-section) .stars i {
+    color: #fbbf24;
+    font-size: 0.9rem;
+}
+
+body:has(.category-hero-section) .rating-text {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Book Meta */
+body:has(.category-hero-section) .book-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+body:has(.category-hero-section) .book-format {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+/* Pagination */
+body:has(.category-hero-section) .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+body:has(.category-hero-section) .pagination-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 40px;
+}
+
+body:has(.category-hero-section) .pagination-btn:hover:not(:disabled),
+body:has(.category-hero-section) .pagination-btn.active {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+body:has(.category-hero-section) .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+body:has(.category-hero-section) .pagination-dots {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 0.5rem;
+}
+
+/* Light Mode Styles for Category Detail */
+body.light-mode:has(.category-hero-section) .category-hero-section {
+    background: linear-gradient(135deg, #fb923c 0%, #ec4899 100%);
+}
+
+body.light-mode:has(.category-hero-section) .breadcrumb span {
+    color: #ea580c;
+}
+
+body.light-mode:has(.category-hero-section) .stat-item {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.category-hero-section) .stat-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+body.light-mode:has(.category-hero-section) .stat-item i {
+    color: #ea580c;
+}
+
+body.light-mode:has(.category-hero-section) .category-icon-large {
+    background: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.category-hero-section) .category-icon-large i {
+    color: #fb923c;
+}
+
+body.light-mode:has(.category-hero-section) .tag {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.category-hero-section) .books-header h2 {
+    color: #1f2937;
+}
+
+body.light-mode:has(.category-hero-section) .books-count {
+    color: #4b5563;
+}
+
+body.light-mode:has(.category-hero-section) .book-card {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode:has(.category-hero-section) .book-card:hover {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.4), rgba(236, 72, 153, 0.4));
+    border-color: #fb923c;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(251, 146, 60, 0.4), 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+body.light-mode:has(.category-hero-section) .book-info h3 {
+    color: #1f2937;
+}
+
+body.light-mode:has(.category-hero-section) .book-author {
+    color: #4b5563;
+}
+
+body.light-mode:has(.category-hero-section) .rating-text {
+    color: #4b5563;
+}
+
+body.light-mode:has(.category-hero-section) .book-meta {
+    color: #6b7280;
+}
+
+body.light-mode:has(.category-hero-section) .book-format {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.category-hero-section) .btn-read {
+    background: #fb923c;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode:has(.category-hero-section) .btn-read:hover {
+    background: #ea580c;
+}
+
+/* Responsive Design for Category Detail */
+@media (max-width: 768px) {
+    body:has(.category-hero-section) .category-hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    body:has(.category-hero-section) .category-hero-left h1 {
+        font-size: 2rem;
+    }
+    
+    body:has(.category-hero-section) .category-hero-left p {
+        font-size: 1rem;
+    }
+    
+    body:has(.category-hero-section) .category-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    body:has(.category-hero-section) .stat-item {
+        min-width: 140px;
+    }
+    
+    body:has(.category-hero-section) .filters-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    body:has(.category-hero-section) .search-filter {
+        max-width: 100%;
+    }
+    
+    body:has(.category-hero-section) .filter-options {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    body:has(.category-hero-section) .books-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    body:has(.category-hero-section) .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body:has(.category-hero-section) .category-hero-section {
+        padding: 2rem 0;
+    }
+    
+    body:has(.category-hero-section) .category-hero-left h1 {
+        font-size: 1.5rem;
+    }
+    
+    body:has(.category-hero-section) .category-icon-large {
+        width: 80px;
+        height: 80px;
+    }
+    
+    body:has(.category-hero-section) .category-icon-large i {
+        font-size: 2rem;
+    }
+    
+    body:has(.category-hero-section) .books-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    body:has(.category-hero-section) .book-info {
+        padding: 1rem;
+    }
+    
+    body:has(.category-hero-section) .book-info h3 {
+        font-size: 1rem;
+    }
+} 

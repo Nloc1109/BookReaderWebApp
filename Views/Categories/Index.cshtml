@@ -1,0 +1,379 @@
+@{
+    ViewData["Title"] = "Thể loại sách";
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-left">
+            <h1>Thể loại sách</h1>
+            <p>Khám phá đa dạng thể loại sách từ văn học kinh điển đến khoa học hiện đại. Tìm kiếm và lựa chọn những cuốn sách phù hợp với sở thích và nhu cầu của bạn.</p>
+            
+            <div class="hero-search">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="hero-search-input" placeholder="Tìm kiếm thể loại...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-book-open"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Thể loại</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-book"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">50,000+</div>
+                        <div class="stat-label">Sách</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-info">
+                        <div class="stat-number">100,000+</div>
+                        <div class="stat-label">Độc giả</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="floating-books">
+                <div class="floating-book book-1">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="floating-book book-2">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="floating-book book-3">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="floating-book book-4">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="floating-book book-5">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+            </div>
+
+            <div class="featured-categories">
+                <h3>Thể loại phổ biến</h3>
+                <div class="category-preview">
+                    <div class="preview-item">
+                        <i class="fas fa-book-open"></i>
+                        <span>Văn học</span>
+                    </div>
+                    <div class="preview-item">
+                        <i class="fas fa-flask"></i>
+                        <span>Khoa học</span>
+                    </div>
+                    <div class="preview-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Kinh tế</span>
+                    </div>
+                    <div class="preview-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Tình cảm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Categories Section -->
+<section class="popular-categories-section">
+    <div class="section-header">
+        <h2>Thể loại phổ biến</h2>
+        <div class="view-options">
+            <button class="view-btn active" data-view="grid">
+                <i class="fas fa-th"></i>
+            </button>
+            <button class="view-btn" data-view="list">
+                <i class="fas fa-list"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="categories-grid">
+        <div class="category-card-large">
+            <div class="category-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <div class="category-info">
+                <h3>Văn học</h3>
+                <p>Tiểu thuyết, truyện ngắn, thơ ca</p>
+                <div class="category-stats">
+                    <span class="book-count">2,567 sách</span>
+                    <span class="reader-count">45,000+ độc giả</span>
+                </div>
+                <div class="featured-book">
+                    <img src="https://via.placeholder.com/60x80/4ade80/ffffff?text=Book" alt="Sách nổi bật">
+                    <div class="book-info">
+                        <h4>Đắc Nhân Tâm</h4>
+                        <p>Dale Carnegie</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-overlay">
+                <button class="btn-explore">Khám phá</button>
+            </div>
+        </div>
+
+        <div class="category-card-large">
+            <div class="category-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+            <div class="category-info">
+                <h3>Khoa học</h3>
+                <p>Nghiên cứu, khám phá, công nghệ</p>
+                <div class="category-stats">
+                    <span class="book-count">890 sách</span>
+                    <span class="reader-count">23,000+ độc giả</span>
+                </div>
+                <div class="featured-book">
+                    <img src="https://via.placeholder.com/60x80/4ade80/ffffff?text=Book" alt="Sách nổi bật">
+                    <div class="book-info">
+                        <h4>Vũ trụ trong lòng bàn tay</h4>
+                        <p>Neil deGrasse Tyson</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-overlay">
+                <button class="btn-explore">Khám phá</button>
+            </div>
+        </div>
+
+        <div class="category-card-large">
+            <div class="category-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="category-info">
+                <h3>Kinh tế</h3>
+                <p>Quản lý, đầu tư, tài chính</p>
+                <div class="category-stats">
+                    <span class="book-count">1,234 sách</span>
+                    <span class="reader-count">34,000+ độc giả</span>
+                </div>
+                <div class="featured-book">
+                    <img src="https://via.placeholder.com/60x80/4ade80/ffffff?text=Book" alt="Sách nổi bật">
+                    <div class="book-info">
+                        <h4>Nghĩ giàu và làm giàu</h4>
+                        <p>Napoleon Hill</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-overlay">
+                <button class="btn-explore">Khám phá</button>
+            </div>
+        </div>
+
+        <div class="category-card-large">
+            <div class="category-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="category-info">
+                <h3>Tình cảm</h3>
+                <p>Lãng mạn, gia đình, tình yêu</p>
+                <div class="category-stats">
+                    <span class="book-count">1,567 sách</span>
+                    <span class="reader-count">67,000+ độc giả</span>
+                </div>
+                <div class="featured-book">
+                    <img src="https://via.placeholder.com/60x80/4ade80/ffffff?text=Book" alt="Sách nổi bật">
+                    <div class="book-info">
+                        <h4>Nhà Giả Kim</h4>
+                        <p>Paulo Coelho</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-overlay">
+                <button class="btn-explore">Khám phá</button>
+            </div>
+        </div>
+
+        <div class="category-card-large">
+            <div class="category-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="category-info">
+                <h3>Giáo dục</h3>
+                <p>Học tập, phát triển, kỹ năng</p>
+                <div class="category-stats">
+                    <span class="book-count">2,100 sách</span>
+                    <span class="reader-count">89,000+ độc giả</span>
+                </div>
+                <div class="featured-book">
+                    <img src="https://via.placeholder.com/60x80/4ade80/ffffff?text=Book" alt="Sách nổi bật">
+                    <div class="book-info">
+                        <h4>7 Thói Quen Hiệu Quả</h4>
+                        <p>Stephen R. Covey</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-overlay">
+                <button class="btn-explore">Khám phá</button>
+            </div>
+        </div>
+
+        <div class="category-card-large">
+            <div class="category-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="category-info">
+                <h3>Self-help</h3>
+                <p>Phát triển bản thân, tư duy</p>
+                <div class="category-stats">
+                    <span class="book-count">1,890 sách</span>
+                    <span class="reader-count">56,000+ độc giả</span>
+                </div>
+                <div class="featured-book">
+                    <img src="https://via.placeholder.com/60x80/4ade80/ffffff?text=Book" alt="Sách nổi bật">
+                    <div class="book-info">
+                        <h4>Atomic Habits</h4>
+                        <p>James Clear</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-overlay">
+                <button class="btn-explore">Khám phá</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- All Categories Section -->
+<section class="all-categories-section">
+    <div class="section-header">
+        <h2>Tất cả thể loại</h2>
+        <div class="filter-options">
+            <select class="filter-select">
+                <option value="">Tất cả</option>
+                <option value="popular">Phổ biến nhất</option>
+                <option value="newest">Mới nhất</option>
+                <option value="most-books">Nhiều sách nhất</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="categories-list">
+        <div class="category-item">
+            <div class="category-icon-small">
+                <i class="fas fa-history"></i>
+            </div>
+            <div class="category-details">
+                <h3>Lịch sử</h3>
+                <p>Quá khứ, văn hóa, sự kiện lịch sử</p>
+                <div class="category-meta">
+                    <span class="book-count">567 sách</span>
+                    <span class="dot">•</span>
+                    <span class="reader-count">12,000+ độc giả</span>
+                </div>
+            </div>
+            <div class="category-actions">
+                <button class="btn-view">Xem</button>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <div class="category-icon-small">
+                <i class="fas fa-mountain"></i>
+            </div>
+            <div class="category-details">
+                <h3>Du lịch</h3>
+                <p>Khám phá, trải nghiệm, hướng dẫn</p>
+                <div class="category-meta">
+                    <span class="book-count">345 sách</span>
+                    <span class="dot">•</span>
+                    <span class="reader-count">8,500+ độc giả</span>
+                </div>
+            </div>
+            <div class="category-actions">
+                <button class="btn-view">Xem</button>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <div class="category-icon-small">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="category-details">
+                <h3>Công nghệ</h3>
+                <p>Lập trình, AI, công nghệ mới</p>
+                <div class="category-meta">
+                    <span class="book-count">1,456 sách</span>
+                    <span class="dot">•</span>
+                    <span class="reader-count">28,000+ độc giả</span>
+                </div>
+            </div>
+            <div class="category-actions">
+                <button class="btn-view">Xem</button>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <div class="category-icon-small">
+                <i class="fas fa-magic"></i>
+            </div>
+            <div class="category-details">
+                <h3>Viễn tưởng</h3>
+                <p>Khoa học viễn tưởng, fantasy</p>
+                <div class="category-meta">
+                    <span class="book-count">789 sách</span>
+                    <span class="dot">•</span>
+                    <span class="reader-count">15,000+ độc giả</span>
+                </div>
+            </div>
+            <div class="category-actions">
+                <button class="btn-view">Xem</button>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <div class="category-icon-small">
+                <i class="fas fa-palette"></i>
+            </div>
+            <div class="category-details">
+                <h3>Nghệ thuật</h3>
+                <p>Hội họa, âm nhạc, kiến trúc</p>
+                <div class="category-meta">
+                    <span class="book-count">432 sách</span>
+                    <span class="dot">•</span>
+                    <span class="reader-count">9,200+ độc giả</span>
+                </div>
+            </div>
+            <div class="category-actions">
+                <button class="btn-view">Xem</button>
+            </div>
+        </div>
+
+        <div class="category-item">
+            <div class="category-icon-small">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <div class="category-details">
+                <h3>Sức khỏe</h3>
+                <p>Y tế, dinh dưỡng, thể thao</p>
+                <div class="category-meta">
+                    <span class="book-count">678 sách</span>
+                    <span class="dot">•</span>
+                    <span class="reader-count">18,500+ độc giả</span>
+                </div>
+            </div>
+            <div class="category-actions">
+                <button class="btn-view">Xem</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/categories.js"></script>
+} 

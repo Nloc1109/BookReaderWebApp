@@ -57,7 +57,9 @@
                 <p>Nhà xuất bản Giáo dục Việt Nam</p>
                 <div class="book-actions">
                     <button class="btn-read">Đọc ngay</button>
-                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                    <button class="btn-favorite" data-book-id="1">
+                        <i class="far fa-heart"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -71,7 +73,9 @@
                 <p>Bộ Giáo dục và Đào tạo</p>
                 <div class="book-actions">
                     <button class="btn-read">Đọc ngay</button>
-                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                    <button class="btn-favorite" data-book-id="2">
+                        <i class="far fa-heart"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -85,7 +89,9 @@
                 <p>NXB Giáo dục Việt Nam</p>
                 <div class="book-actions">
                     <button class="btn-read">Đọc ngay</button>
-                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                    <button class="btn-favorite" data-book-id="3">
+                        <i class="far fa-heart"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -99,7 +105,9 @@
                 <p>Bộ Giáo dục và Đào tạo</p>
                 <div class="book-actions">
                     <button class="btn-read">Đọc ngay</button>
-                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                    <button class="btn-favorite" data-book-id="4">
+                        <i class="far fa-heart"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -113,7 +121,9 @@
                 <p>NXB Giáo dục Việt Nam</p>
                 <div class="book-actions">
                     <button class="btn-read">Đọc ngay</button>
-                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                    <button class="btn-favorite" data-book-id="5">
+                        <i class="far fa-heart"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -127,7 +137,9 @@
                 <p>Nhà xuất bản Giáo dục</p>
                 <div class="book-actions">
                     <button class="btn-read">Đọc ngay</button>
-                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                    <button class="btn-favorite" data-book-id="6">
+                        <i class="far fa-heart"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -170,7 +182,7 @@
         </div>
         
         <div class="category-card">
-            <i class="fas fa-heart"></i>
+            <i class="fas fa-book-open"></i>
             <h3>Văn học</h3>
             <p>789 sách</p>
         </div>
@@ -192,4 +204,77 @@
 
 @section Scripts {
     <script src="~/js/home.js"></script>
+    <script>
+        // Xử lý nút yêu thích
+        document.addEventListener('DOMContentLoaded', function() {
+            const favoriteButtons = document.querySelectorAll('.btn-favorite');
+            
+            favoriteButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const icon = this.querySelector('i');
+                    const bookId = this.getAttribute('data-book-id');
+                    
+                    // Toggle trạng thái yêu thích
+                    if (icon.classList.contains('far')) {
+                        // Chuyển sang trái tim đầy (yêu thích)
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        this.classList.add('favorited');
+                        showNotification('Đã thêm vào yêu thích!', 'success');
+                    } else {
+                        // Chuyển về trái tim rỗng (bỏ yêu thích)
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        this.classList.remove('favorited');
+                        showNotification('Đã xóa khỏi yêu thích!', 'info');
+                    }
+                });
+            });
+        });
+        
+        // Hàm hiển thị thông báo
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                color: white;
+                font-weight: 500;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+                background: ${type === 'success' ? '#10b981' : '#3b82f6'};
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 2000);
+        }
+        
+        // Thêm CSS animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @@keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @@keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 }

@@ -1,5 +1,5 @@
 /* ==========================================
-   CSS VARIABLES
+   CSS VARIABLES - DARK MODE ONLY
    ========================================== */
 :root {
     --primary-green: #4ade80;
@@ -62,6 +62,7 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 2;
+    transition: all 0.3s ease;
 }
 
 /* ==========================================
@@ -102,7 +103,7 @@
 }
 
 /* ==========================================
-   AUTH FORM
+   FORM STYLES
    ========================================== */
 .auth-form {
     margin-bottom: 2rem;
@@ -132,7 +133,7 @@
     align-items: center;
 }
 
-.input-wrapper i {
+.input-wrapper i:not(.password-toggle i) {
     position: absolute;
     left: 1rem;
     color: var(--text-gray);
@@ -164,12 +165,20 @@
 .password-toggle {
     position: absolute;
     right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
     color: var(--text-gray);
     cursor: pointer;
     padding: 0.25rem;
     transition: all 0.3s ease;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
 }
 
 .password-toggle:hover {
@@ -465,7 +474,7 @@
 }
 
 /* ==========================================
-   NOTIFICATION
+   NOTIFICATIONS
    ========================================== */
 .notification {
     position: fixed;
@@ -526,6 +535,11 @@
     .auth-header h1 {
         font-size: 1.75rem;
     }
+    
+    .input-wrapper input {
+        padding: 0.875rem 1rem 0.875rem 2.75rem;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -542,7 +556,7 @@
     }
     
     .input-wrapper input {
-        padding: 0.875rem 1rem 0.875rem 2.75rem;
+        padding: 0.875rem 0.875rem 0.875rem 2.5rem;
         font-size: 0.9rem;
     }
     
