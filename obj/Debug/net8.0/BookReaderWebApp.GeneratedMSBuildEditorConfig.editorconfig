@@ -68,6 +68,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU3lzdGVtU2V0dGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DuanCode/BookReaderWebApp/Views/Audiobooks/Audiobookhome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVkaW9ib29rc1xBdWRpb2Jvb2tob21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuanCode/BookReaderWebApp/Views/Audiobooks/Narrators.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVkaW9ib29rc1xOYXJyYXRvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DuanCode/BookReaderWebApp/Views/Books/Category.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -98,6 +106,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DuanCode/BookReaderWebApp/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuanCode/BookReaderWebApp/Views/E-Book/Ebookhome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRS1Cb29rXEVib29raG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DuanCode/BookReaderWebApp/Views/Home/Index.cshtml]

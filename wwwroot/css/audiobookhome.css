@@ -1,0 +1,1137 @@
+/* AUDIOBOOKS PAGE STYLES */
+
+/* CSS Variables */
+:root {
+    --primary-blue: #1e40af;
+    --primary-green: #4ade80;
+    --primary-orange: #fb923c;
+    --primary-pink: #ec4899;
+}
+
+/* Background Pattern */
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(78, 222, 128, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(78, 222, 128, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: gridMove2 15s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hiển thị background pattern cho cả hai chế độ */
+body.dark-mode .background-pattern {
+    opacity: 1;
+    background-image: 
+        linear-gradient(rgba(78, 222, 128, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(78, 222, 128, 0.1) 1px, transparent 1px);
+}
+
+body.light-mode .background-pattern {
+    opacity: 1;
+    background-image: 
+        linear-gradient(rgba(251, 146, 60, 0.6) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(251, 146, 60, 0.6) 1px, transparent 1px);
+}
+
+@keyframes gridMove2 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, 30px); }
+}
+
+/* Scope all styles to audiobooks page only */
+body:has(.hero-section) .home-btn,
+body:has(.hero-section) .hero-section,
+body:has(.hero-section) .hero-content,
+body:has(.hero-section) .hero-left,
+body:has(.hero-section) .hero-right,
+body:has(.hero-section) .hero-content h1,
+body:has(.hero-section) .hero-content p,
+body:has(.hero-section) .hero-search,
+body:has(.hero-section) .search-container,
+body:has(.hero-section) .search-container i,
+body:has(.hero-section) .hero-search-input,
+body:has(.hero-section) .hero-search-input::placeholder,
+body:has(.hero-section) .search-btn,
+body:has(.hero-section) .search-btn:hover,
+body:has(.hero-section) .hero-stats,
+body:has(.hero-section) .stat-item,
+body:has(.hero-section) .stat-item:hover,
+body:has(.hero-section) .stat-item i,
+body:has(.hero-section) .stat-info,
+body:has(.hero-section) .stat-number,
+body:has(.hero-section) .stat-label,
+body:has(.hero-section) .floating-books,
+body:has(.hero-section) .floating-book,
+body:has(.hero-section) .floating-book.book-1,
+body:has(.hero-section) .floating-book.book-2,
+body:has(.hero-section) .floating-book.book-3,
+body:has(.hero-section) .floating-book.book-4,
+body:has(.hero-section) .floating-book.book-5,
+body:has(.hero-section) .featured-categories,
+body:has(.hero-section) .featured-categories h3,
+body:has(.hero-section) .category-preview,
+body:has(.hero-section) .preview-item,
+body:has(.hero-section) .preview-item:hover,
+body:has(.hero-section) .preview-item i,
+body:has(.hero-section) .preview-item span,
+body:has(.hero-section) .section-header,
+body:has(.hero-section) .section-header h2,
+body:has(.hero-section) .view-all-btn,
+body:has(.hero-section) .view-all-btn:hover,
+body:has(.hero-section) .categories-section,
+body:has(.hero-section) .categories-scroll,
+body:has(.hero-section) .categories-scroll::-webkit-scrollbar,
+body:has(.hero-section) .category-card,
+body:has(.hero-section) .category-card:hover,
+body:has(.hero-section) .category-card i,
+body:has(.hero-section) .category-card h3,
+body:has(.hero-section) .category-card p,
+body:has(.hero-section) .trending-section,
+body:has(.hero-section) .new-releases-section,
+body:has(.hero-section) .recommended-section,
+body:has(.hero-section) .books-scroll,
+body:has(.hero-section) .books-scroll::-webkit-scrollbar,
+body:has(.hero-section) .book-card,
+body:has(.hero-section) .book-card:hover,
+body:has(.hero-section) .book-cover,
+body:has(.hero-section) .book-cover img,
+body:has(.hero-section) .book-card:hover .book-cover img,
+body:has(.hero-section) .book-overlay,
+body:has(.hero-section) .book-card:hover .book-overlay,
+body:has(.hero-section) .btn-read,
+body:has(.hero-section) .btn-read:hover,
+body:has(.hero-section) .new-badge,
+body:has(.hero-section) .book-info,
+body:has(.hero-section) .book-info h3,
+body:has(.hero-section) .book-info p,
+body:has(.hero-section) .book-rating,
+body:has(.hero-section) .book-rating i,
+body:has(.hero-section) .book-rating span {
+    /* Apply styles here */
+}
+
+/* Home Button in Header - Only for Audiobooks pages */
+body:has(.hero-section) .home-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+}
+
+body:has(.hero-section) .home-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Hero Section */
+body:has(.hero-section) .hero-section {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+    padding: 4rem 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+body:has(.hero-section) .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+body:has(.hero-section) .hero-left {
+    flex: 1;
+    text-align: left;
+}
+
+body:has(.hero-section) .hero-right {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+}
+
+body:has(.hero-section) .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body:has(.hero-section) .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 500px;
+}
+
+/* Hero Search */
+body:has(.hero-section) .hero-search {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+body:has(.hero-section) .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    padding: 0.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body:has(.hero-section) .search-container i {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
+
+body:has(.hero-section) .hero-search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+body:has(.hero-section) .hero-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body:has(.hero-section) .search-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 0.5rem;
+}
+
+body:has(.hero-section) .search-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Hero Stats */
+body:has(.hero-section) .hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+body:has(.hero-section) .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+body:has(.hero-section) .stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+body:has(.hero-section) .stat-item i {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+}
+
+body:has(.hero-section) .stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+body:has(.hero-section) .stat-number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+body:has(.hero-section) .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Floating Books Animation */
+body:has(.hero-section) .floating-books {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body:has(.hero-section) .floating-book {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+body:has(.hero-section) .floating-book.book-1 {
+    top: 20%;
+    right: 20%;
+    animation-delay: 0s;
+}
+
+body:has(.hero-section) .floating-book.book-2 {
+    top: 40%;
+    right: 60%;
+    animation-delay: 1s;
+}
+
+body:has(.hero-section) .floating-book.book-3 {
+    top: 60%;
+    right: 30%;
+    animation-delay: 2s;
+}
+
+body:has(.hero-section) .floating-book.book-4 {
+    top: 30%;
+    right: 80%;
+    animation-delay: 3s;
+}
+
+body:has(.hero-section) .floating-book.book-5 {
+    top: 70%;
+    right: 70%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* Featured Categories */
+body:has(.hero-section) .featured-categories {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 300px;
+}
+
+body:has(.hero-section) .featured-categories h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+body:has(.hero-section) .category-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+body:has(.hero-section) .preview-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+body:has(.hero-section) .preview-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+body:has(.hero-section) .preview-item i {
+    font-size: 1rem;
+    color: var(--primary-green);
+}
+
+body:has(.hero-section) .preview-item span {
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 500;
+}
+
+/* Section Headers */
+body:has(.hero-section) .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+body:has(.hero-section) .section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+body:has(.hero-section) .view-all-btn {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(78, 222, 128, 0.1);
+    border: 1px solid rgba(78, 222, 128, 0.3);
+}
+
+body:has(.hero-section) .view-all-btn:hover {
+    background: rgba(78, 222, 128, 0.2);
+    color: var(--primary-green);
+    transform: translateY(-2px);
+}
+
+/* Audio Player Demo Section */
+body:has(.hero-section) .audio-player-demo-section {
+    padding: 4rem 0;
+    background: #1e293b;
+}
+
+body:has(.hero-section) .audio-player-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+body:has(.hero-section) .player-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+body:has(.hero-section) .player-cover {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+body:has(.hero-section) .player-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body:has(.hero-section) .play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body:has(.hero-section) .player-card:hover .play-overlay {
+    opacity: 1;
+}
+
+body:has(.hero-section) .play-demo-btn {
+    background: var(--primary-green);
+    border: none;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body:has(.hero-section) .play-demo-btn:hover {
+    background: #22c55e;
+    transform: scale(1.1);
+}
+
+body:has(.hero-section) .player-info {
+    padding: 2rem;
+    color: white;
+}
+
+body:has(.hero-section) .player-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+body:has(.hero-section) .player-info p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+body:has(.hero-section) .audio-progress {
+    margin-bottom: 1.5rem;
+}
+
+body:has(.hero-section) .progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+body:has(.hero-section) .progress-fill {
+    height: 100%;
+    background: var(--primary-green);
+    width: 30%;
+    border-radius: 3px;
+}
+
+body:has(.hero-section) .time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body:has(.hero-section) .player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+body:has(.hero-section) .control-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body:has(.hero-section) .control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+body:has(.hero-section) .play-btn {
+    background: var(--primary-green);
+}
+
+body:has(.hero-section) .play-btn:hover {
+    background: #22c55e;
+}
+
+/* Featured Narrators Section */
+body:has(.hero-section) .featured-narrators-section {
+    padding: 4rem 0;
+    background: #1e293b;
+}
+
+body:has(.hero-section) .narrators-scroll {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body:has(.hero-section) .narrators-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+body:has(.hero-section) .narrator-card {
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+}
+
+body:has(.hero-section) .narrator-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-green);
+}
+
+body:has(.hero-section) .narrator-image {
+    position: relative;
+    overflow: hidden;
+}
+
+body:has(.hero-section) .narrator-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+body:has(.hero-section) .narrator-card:hover .narrator-image img {
+    transform: scale(1.05);
+}
+
+body:has(.hero-section) .narrator-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body:has(.hero-section) .narrator-card:hover .narrator-overlay {
+    opacity: 1;
+}
+
+body:has(.hero-section) .play-sample-btn {
+    background: var(--primary-green);
+    border: none;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body:has(.hero-section) .play-sample-btn:hover {
+    background: #22c55e;
+    transform: scale(1.1);
+}
+
+body:has(.hero-section) .narrator-info {
+    padding: 1rem;
+}
+
+body:has(.hero-section) .narrator-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+body:has(.hero-section) .narrator-info p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.75rem;
+}
+
+body:has(.hero-section) .narrator-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+body:has(.hero-section) .narrator-rating i {
+    color: #fbbf24;
+    font-size: 0.9rem;
+}
+
+body:has(.hero-section) .narrator-rating span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Categories Section */
+body:has(.hero-section) .categories-section {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+body:has(.hero-section) .categories-scroll {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body:has(.hero-section) .categories-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+body:has(.hero-section) .category-card {
+    min-width: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+}
+
+body:has(.hero-section) .category-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--primary-green);
+}
+
+body:has(.hero-section) .category-card i {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+body:has(.hero-section) .category-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+body:has(.hero-section) .category-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Books Sections */
+body:has(.hero-section) .trending-section,
+body:has(.hero-section) .new-releases-section,
+body:has(.hero-section) .recommended-section {
+    padding: 4rem 0;
+}
+
+body:has(.hero-section) .trending-section {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+body:has(.hero-section) .new-releases-section {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+body:has(.hero-section) .recommended-section {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+body:has(.hero-section) .books-scroll {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body:has(.hero-section) .books-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Book Cards */
+body:has(.hero-section) .book-card {
+    min-width: 180px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    flex-shrink: 0;
+}
+
+body:has(.hero-section) .book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-green);
+}
+
+body:has(.hero-section) .book-cover {
+    position: relative;
+    overflow: hidden;
+}
+
+body:has(.hero-section) .book-cover img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+body:has(.hero-section) .book-card:hover .book-cover img {
+    transform: scale(1.05);
+}
+
+body:has(.hero-section) .book-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body:has(.hero-section) .book-card:hover .book-overlay {
+    opacity: 1;
+}
+
+body:has(.hero-section) .btn-read {
+    background: var(--primary-green);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+body:has(.hero-section) .btn-read:hover {
+    background: #22c55e;
+    transform: scale(1.1);
+}
+
+body:has(.hero-section) .new-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: #ef4444;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+body:has(.hero-section) .book-info {
+    padding: 1rem;
+}
+
+body:has(.hero-section) .book-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+body:has(.hero-section) .book-info p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.75rem;
+}
+
+body:has(.hero-section) .book-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+body:has(.hero-section) .book-rating i {
+    color: #fbbf24;
+    font-size: 0.9rem;
+}
+
+body:has(.hero-section) .book-rating span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Light Mode Styles */
+body.light-mode:has(.hero-section) .hero-section {
+    background: linear-gradient(135deg, #fb923c 0%, #ec4899 100%);
+}
+
+body.light-mode:has(.hero-section) .stat-item {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.light-mode:has(.hero-section) .stat-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+body.light-mode:has(.hero-section) .stat-item i {
+    color: #ea580c;
+}
+
+body.light-mode:has(.hero-section) .floating-book {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.light-mode:has(.hero-section) .featured-categories {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.light-mode:has(.hero-section) .preview-item {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.light-mode:has(.hero-section) .preview-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+body.light-mode:has(.hero-section) .preview-item i {
+    color: #ea580c;
+}
+
+body.light-mode:has(.hero-section) .section-header h2 {
+    color: #7c2d12;
+}
+
+body.light-mode:has(.hero-section) .view-all-btn {
+    color: #ea580c;
+    background: rgba(251, 146, 60, 0.1);
+    border-color: rgba(251, 146, 60, 0.3);
+}
+
+body.light-mode:has(.hero-section) .view-all-btn:hover {
+    background: rgba(251, 146, 60, 0.2);
+    color: #ea580c;
+}
+
+body.light-mode:has(.hero-section) .category-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.light-mode:has(.hero-section) .category-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fb923c;
+}
+
+body.light-mode:has(.hero-section) .category-card i {
+    color: #fb923c;
+}
+
+body.light-mode:has(.hero-section) .category-card h3 {
+    color: #7c2d12;
+}
+
+body.light-mode:has(.hero-section) .category-card p {
+    color: rgba(124, 45, 18, 0.7);
+}
+
+body.light-mode:has(.hero-section) .book-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.light-mode:has(.hero-section) .book-card:hover {
+    border-color: #fb923c;
+}
+
+body.light-mode:has(.hero-section) .book-info h3 {
+    color: #7c2d12;
+}
+
+body.light-mode:has(.hero-section) .book-info p {
+    color: rgba(124, 45, 18, 0.7);
+}
+
+body.light-mode:has(.hero-section) .book-rating span {
+    color: rgba(124, 45, 18, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body:has(.hero-section) .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    body:has(.hero-section) .hero-left {
+        text-align: center;
+    }
+    body:has(.hero-section) .hero-right {
+        min-height: 300px;
+    }
+    body:has(.hero-section) .hero-content h1 {
+        font-size: 2rem;
+    }
+    body:has(.hero-section) .hero-content p {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body:has(.hero-section) .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    body:has(.hero-section) .stat-item {
+        min-width: 140px;
+    }
+    body:has(.hero-section) .search-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    body:has(.hero-section) .hero-search-input {
+        width: 100%;
+        text-align: center;
+    }
+    body:has(.hero-section) .search-btn {
+        width: 100%;
+        margin-right: 0;
+    }
+    body:has(.hero-section) .featured-categories {
+        position: relative;
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    body:has(.hero-section) .floating-books {
+        display: none;
+    }
+    body:has(.hero-section) .section-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    body:has(.hero-section) .categories-scroll,
+    body:has(.hero-section) .books-scroll,
+    body:has(.hero-section) .narrators-scroll {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    body:has(.hero-section) .category-card {
+        min-width: 120px;
+        padding: 1rem 0.75rem;
+    }
+    body:has(.hero-section) .book-card {
+        min-width: 150px;
+    }
+    body:has(.hero-section) .book-cover img {
+        height: 200px;
+    }
+    body:has(.hero-section) .narrator-card {
+        min-width: 150px;
+    }
+    body:has(.hero-section) .narrator-image img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    body:has(.hero-section) .hero-section {
+        padding: 2rem 0;
+    }
+    body:has(.hero-section) .categories-section,
+    body:has(.hero-section) .trending-section,
+    body:has(.hero-section) .new-releases-section,
+    body:has(.hero-section) .recommended-section,
+    body:has(.hero-section) .featured-narrators-section,
+    body:has(.hero-section) .audio-player-demo-section {
+        padding: 2rem 0;
+    }
+    body:has(.hero-section) .category-card {
+        min-width: 100px;
+        padding: 0.75rem 0.5rem;
+    }
+    body:has(.hero-section) .category-card i {
+        font-size: 1.5rem;
+    }
+    body:has(.hero-section) .category-card h3 {
+        font-size: 0.9rem;
+    }
+    body:has(.hero-section) .category-card p {
+        font-size: 0.8rem;
+    }
+    body:has(.hero-section) .book-card {
+        min-width: 130px;
+    }
+    body:has(.hero-section) .book-cover img {
+        height: 180px;
+    }
+    body:has(.hero-section) .book-info {
+        padding: 0.75rem;
+    }
+    body:has(.hero-section) .book-info h3 {
+        font-size: 0.9rem;
+    }
+    body:has(.hero-section) .book-info p {
+        font-size: 0.8rem;
+    }
+    body:has(.hero-section) .narrator-card {
+        min-width: 120px;
+    }
+    body:has(.hero-section) .narrator-image img {
+        height: 150px;
+    }
+} 

@@ -6,16 +6,12 @@
     <title>@ViewData["Title"] - BookReader</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/home.css?v=@DateTime.Now.Ticks" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/library.css?v=@DateTime.Now.Ticks" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/categories.css?v=@DateTime.Now.Ticks" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
     <style>
         /* Light Mode - Orange Pink Theme (With Grid Pattern) */
         body.light-mode {
             background: #fff5f5 !important;
             color: #7c2d12 !important;
-        }
-        
-        body.light-mode {
             background-image: 
                 linear-gradient(rgba(251, 146, 60, 0.6) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(251, 146, 60, 0.6) 1px, transparent 1px) !important;
@@ -27,15 +23,14 @@
         body.dark-mode {
             background: #1e293b !important;
             color: #ffffff !important;
-        }
-        
-        body.dark-mode {
             background-image: 
                 linear-gradient(rgba(78, 222, 128, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(78, 222, 128, 0.1) 1px, transparent 1px) !important;
             background-size: 30px 30px !important;
             animation: gridMove 15s linear infinite !important;
         }
+        
+
         
         @@keyframes gridMove {
             0% { background-position: 0 0; }
@@ -63,7 +58,7 @@
         }
         
         <nav class="nav-links">
-            <a href="/Books">Sách điện tử</a>
+            <a href="/E-Book">Sách điện tử</a>
             <a href="/Audiobooks">Sách nói</a>
             <a href="/Categories">Thể loại</a>
             <a href="/Library">Thư viện</a>

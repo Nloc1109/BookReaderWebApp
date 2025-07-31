@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Search functionality
     const searchBtn = document.querySelector('.search-btn');
-    const searchInput = document.querySelector('.search-input');
+    const searchInput = document.querySelector('.search-input input');
     
     if (searchBtn && searchInput) {
         searchBtn.addEventListener('click', function() {
@@ -24,17 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Filter buttons
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterBtns.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Get filter value
-            const filter = this.getAttribute('data-filter');
+    // Filter radio buttons
+    const filterOptions = document.querySelectorAll('.filter-option input[type="radio"]');
+    filterOptions.forEach(option => {
+        option.addEventListener('change', function() {
+            const filter = this.value;
             console.log('Filter selected:', filter);
             
             // TODO: Implement filter functionality
@@ -75,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             const bookCard = this.closest('.book-card');
-            const bookTitle = bookCard.querySelector('.book-title').textContent;
+            const bookTitle = bookCard.querySelector('.book-info h3').textContent;
             
             // Show loading state
             this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang tải...';
@@ -100,8 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Newsletter form
     const newsletterForm = document.querySelector('.newsletter-form');
-    const newsletterInput = document.querySelector('.newsletter-input');
-    const newsletterBtn = document.querySelector('.newsletter-btn');
+    const newsletterInput = document.querySelector('.newsletter-form input');
+    const newsletterBtn = document.querySelector('.newsletter-form button');
     
     if (newsletterForm && newsletterInput && newsletterBtn) {
         newsletterForm.addEventListener('submit', function(e) {
@@ -180,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Header scroll effect
-    const header = document.querySelector('.header');
+    const header = document.querySelector('header');
     let lastScrollTop = 0;
     
     window.addEventListener('scroll', function() {
@@ -251,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const bookCards = document.querySelectorAll('.book-card');
     bookCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            const title = this.querySelector('.book-title').textContent;
+            const title = this.querySelector('.book-info h3').textContent;
             this.setAttribute('title', title);
         });
     });
@@ -273,8 +267,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Focus search input with Ctrl+K
         if (e.ctrlKey && e.key === 'k') {
             e.preventDefault();
-            if (searchInput) {
-                searchInput.focus();
+            const searchInputElement = document.querySelector('.search-input input');
+            if (searchInputElement) {
+                searchInputElement.focus();
             }
         }
         
@@ -286,4 +281,3 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('BookReader home page initialized successfully!');
 });
-image.png

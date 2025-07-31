@@ -7,7 +7,7 @@ namespace BookReaderWebApp.Controllers
         public IActionResult Index()
         {
             ViewData["Title"] = "Thể loại sách";
-            return View();
+            return View("Categoryhome");
         }
 
         public IActionResult Detail(string id)
